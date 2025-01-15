@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Online Voting System 🌟</h1>
+
+        <!-- Voter ID Section -->
+        <div id="voterSection" class="card">
+            <h2>Enter Your Voter ID</h2>
+            <input type="text" id="voterIdInput" placeholder="Enter Voter ID">
+            <button onclick="verifyVoter()">Verify</button>
+        </div>
+
+        <!-- Voting Section -->
+        <div id="candidates" class="card" style="display: none;">
+            <h2>Vote for Your Favorite Candidate</h2>
+            <p>Select one of the candidates below:</p>
+            <div id="candidateList" class="candidate-list"></div>
+        </div>
+
+        <!-- Confirmation Popup -->
+        <div id="confirmationBox" class="popup" style="display: none;">
+            <div class="popup-content">
+                <p>Are you sure you want to vote for <span id="candidateName"></span>?</p>
+                <button onclick="confirmVote()">Yes</button>
+                <button onclick="closePopup()">No</button>
+            </div>
+        </div>
+
+        <!-- Thank You Section -->
+        <div id="thankYouSection" class="card" style="display: none;">
+            <h2>🎉 Thank You for Voting! 🎉</h2>
+            <p>Your vote has been recorded successfully. Have a great day!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
